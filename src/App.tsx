@@ -34,7 +34,7 @@ import {
 const Slide = ({ children, id, className = "" }: { children: ReactNode, id: string, className?: string }) => (
   <section 
     id={id} 
-    className={`h-screen w-full snap-start snap-always flex flex-col items-center justify-center px-4 md:px-6 relative overflow-hidden ${className}`}
+    className={`w-full max-w-[92vw] sm:max-w-xl md:max-w-5xl mx-auto px-4 h-screen w-full snap-start snap-always flex flex-col items-center justify-center px-4 md:px-6 relative overflow-hidden ${className}`}
   >
     {children}
   </section>
@@ -87,14 +87,14 @@ export default function App() {
 
       {/* Slide 1: The Hook */}
       <Slide id="hero">
-        <div className="max-w-4xl w-full text-center space-y-6 md:space-y-8">
+        <div className="max-w-4xl w-full text-center space-y-4 md:space-y-8 flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.2 }}
-            className="flex justify-center mb-2"
+            className="flex justify-center mb-4"
           >
-            <Terminal className="text-[#dc2626] animate-pulse" size={80} />
+            <Terminal className="text-[#dc2626] animate-pulse" size={60} />
           </motion.div>
           
           <div className="space-y-4">
@@ -102,7 +102,7 @@ export default function App() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-4xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9] md:leading-none"
+              className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.9] md:leading-none"
             >
               <span className="text-white">The Architecture</span> <br />
               <span className="text-white">of a</span> <span className="text-[#dc2626]">Free Person</span>
@@ -112,7 +112,7 @@ export default function App() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="font-mono text-sm md:text-2xl text-zinc-400 tracking-widest uppercase italic"
+              className="font-mono text-s md:text-2xl text-zinc-400 tracking-widest uppercase italic"
             >
               Master the tools shaping our world.
             </motion.p>
@@ -150,20 +150,20 @@ export default function App() {
       {/* Slide 2: The Foundation */}
       <Slide id="mandate">
         <div className="max-w-5xl w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-4 md:space-y-6">
-            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter">The Foundation</h2>
+          <div className="space-y-4 md:space-y-6 ">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Foundation</h2>
             <div className="h-1 w-16 md:w-20 bg-[#dc2626]" />
-            <p className="text-lg md:text-xl text-zinc-300 leading-relaxed font-mono">
+            <p className="text-lg/6 md:text-xl text-zinc-300 font-mono">
               Freedom in the digital age requires mastering the stack.
             </p>
-            <p className="text-base md:text-lg text-zinc-400">
+            <p className="text-base/5 md:text-lg text-zinc-400">
               A free person is someone who understands, operates, and owns the digital infrastructure around them. We execute a live deployment of your sovereignty stack, together.
             </p>
           </div>
           
-          <div className="bg-zinc-900/50 p-6 md:p-8 border border-zinc-800 space-y-6 md:space-y-8 relative overflow-hidden">
+          <div className="bg-zinc-900/50 p-3 md:p-8 border border-zinc-800 space-y-6 md:space-y-8 relative overflow-hidden">
             <Layers className="absolute -bottom-4 -right-4 text-white opacity-5" size={160} />
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-10 space-y-2">
               <div className="flex items-center gap-4">
                 <div className="text-4xl md:text-5xl font-black text-white">3</div>
                 <div className="font-mono uppercase tracking-tighter text-xs md:text-sm text-white">
@@ -191,20 +191,20 @@ export default function App() {
       </Slide>
 
       {/* Slide 3: Module 1 - The Fortress */}
-      <Slide id="fortress" className="bg-[#000000]">
-        <div className="max-w-4xl w-full space-y-8 md:space-y-12">
-          <div className="flex items-baseline gap-3 md:gap-4">
-            <span className="text-4xl md:text-6xl font-black text-zinc-800">01</span>
+      <Slide id="fortress">
+        <div className="max-w-4xl w-full space-y-4 md:space-y-12">
+          <div className="flex justify-center items-baseline gap-3 md:gap-4">
+            <span className="text-4xl md:text-5xl font-black text-zinc-800">01</span>
             <div className="space-y-1">
-              <h2 className="text-3xl md:text-7xl font-black uppercase tracking-tighter">The Fortress</h2>
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Fortress</h2>
               <p className="font-mono text-white bg-[rgb(220,38,38)] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold text-center ">Digital Literacy</p>
-              <p className="text-lg md:text-xl text-zinc-300 leading-relaxed font-mono">
+              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono">
               90 Minute | 1-on-1 | Online Session
             </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
             {[
               { icon: Zap, title: "High-Speed Interface", desc: "Master the Search, clipboard management and keyboard shortcuts to eliminate friction and reclaim lost hours." },
               { icon: Shield, title: "The Digital Shield", desc: "Implement hardware-linked multi-factor authentication (2FA) and privacy-focused browsers to secure your digital footprint." },
@@ -213,15 +213,15 @@ export default function App() {
               <motion.div 
                 key={i}
                 whileHover={{ y: -5 }}
-                className="p-5 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[130px] md:min-h-[180px] transition-colors duration-300"
+                className="p-3 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[100px] md:min-h-[180px] transition-colors duration-300"
               >
                 <item.icon 
                   className="absolute top-1/2 right-4 -translate-y-1/2 text-[#dc2626] opacity-10 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300 z-0" 
                   size={120} 
                 />
-                <div className="relative z-10 space-y-2">
+                <div className="relative z-10 space-y-1">
                   <h3 className="font-bold uppercase tracking-tight text-sm md:text-base">{item.title}</h3>
-                  <p className="text-xm md:text-sm text-zinc-100 font-mono leading-relaxed">{item.desc}</p>
+                  <p className="text-xs/4 md:text-sm text-zinc-100 font-mono">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -231,19 +231,19 @@ export default function App() {
 
       {/* Slide 4: Module 2 - The Engine */}
       <Slide id="engine">
-        <div className="max-w-4xl w-full space-y-8 md:space-y-12">
-          <div className="flex items-baseline gap-3 md:gap-4">
-            <span className="text-4xl md:text-6xl font-black text-zinc-800">02</span>
+        <div className="max-w-4xl w-full space-y-4 md:space-y-12">
+          <div className="flex justify-center items-baseline gap-3 md:gap-4">
+            <span className="text-4xl md:text-5xl font-black text-zinc-800">02</span>
             <div className="space-y-1">
-              <h2 className="text-3xl md:text-7xl font-black uppercase tracking-tighter">The Engine</h2>
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Engine</h2>
               <p className="font-mono text-black bg-[#00ff5e] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold text-center">AI & Agents</p>
-              <p className="text-lg md:text-xl text-zinc-300 leading-relaxed font-mono">
+              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono">
               90 Minute | 1-on-1 | Online Session
             </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
             {[
               { icon: Network, title: "Prompt Architecture", desc: "Master the strict Role, Context, Result, Aim, Limit framework to manage AI as an expert secretary." },
               { icon: GitBranch, title: "Chain-of-Thought", desc: "Force the machine to generate intermediate reasoning steps, drastically reducing logic errors." },
@@ -252,7 +252,7 @@ export default function App() {
               <motion.div 
                 key={i}
                 whileHover={{ y: -5 }}
-                className="p-4 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[110px] md:min-h-[140px] transition-colors duration-300"
+                className="p-3 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[100px] md:min-h-[140px] transition-colors duration-300"
               >
                 <item.icon 
                   className="absolute top-1/2 right-4 -translate-y-1/2 text-[#00ff5e] opacity-10 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300 z-0" 
@@ -260,7 +260,7 @@ export default function App() {
                 />
                 <div className="relative z-10 space-y-1 md:space-y-2">
                   <h3 className="font-bold uppercase tracking-tight text-sm md:text-base">{item.title}</h3>
-                  <p className="text-xm md:text-sm text-zinc-100 font-mono leading-relaxed">{item.desc}</p>
+                  <p className="text-xs/4 md:text-sm text-zinc-100 font-mono">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -269,20 +269,20 @@ export default function App() {
       </Slide>
 
       {/* Slide 5: Module 3 - The Vault */}
-      <Slide id="vault" className="bg-[#000000]">
-        <div className="max-w-4xl w-full space-y-8 md:space-y-12">
-          <div className="flex items-baseline gap-3 md:gap-4">
-            <span className="text-4xl md:text-6xl font-black text-zinc-800">03</span>
+      <Slide id="vault">
+        <div className="max-w-4xl w-full space-y-4 md:space-y-12">
+          <div className="flex justify-center items-baseline gap-3 md:gap-4">
+            <span className="text-4xl md:text-5xl font-black text-zinc-800">03</span>
             <div className="space-y-1">
-              <h2 className="text-3xl md:text-7xl font-black uppercase tracking-tighter">The Vault</h2>
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Vault</h2>
               <p className="font-mono text-black bg-[#3b82f6] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.1em] font-bold text-center">Blockchain & Web3</p>
-              <p className="text-lg md:text-xl text-zinc-300 leading-relaxed font-mono">
+              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono">
               90 Minute | 1-on-1 | Online Session
             </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
             {[
               { icon: Activity, title: "Inflation Hedging", desc: "Deploy the 50/30/20 budget rule and retirement bucket strategy to build long-term financial resilience." },
               { icon: Vault, title: "Absolute Self-Custody", desc: "Secure your digital assets using non-custodial wallets and navigate to Web3 decentralized networks." },
@@ -291,7 +291,7 @@ export default function App() {
               <motion.div 
                 key={i}
                 whileHover={{ y: -5 }}
-                className="p-4 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[110px] md:min-h-[140px] transition-colors duration-300"
+                className="p-3 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[100px] md:min-h-[140px] transition-colors duration-300"
               >
                 <item.icon 
                   className="absolute top-1/2 right-4 -translate-y-1/2 text-[#0062ff] opacity-10 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300 z-0" 
@@ -299,7 +299,7 @@ export default function App() {
                 />
                 <div className="relative z-10 space-y-1 md:space-y-2">
                   <h3 className="font-bold uppercase tracking-tight text-sm md:text-base">{item.title}</h3>
-                  <p className="text-xm md:text-sm text-zinc-100 font-mono leading-relaxed">{item.desc}</p>
+                  <p className="text-xs/4 md:text-sm text-zinc-100 font-mono">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -309,57 +309,54 @@ export default function App() {
 
       {/* Slide 6: The Protocol */}
       <Slide id="protocol">
-        <div className="max-w-4xl w-full space-y-8 md:space-y-12 text-center">
+        <div className="max-w-4xl w-full space-y-2 md:space-y-6 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter">The Integration <span className="text-[#dc2626]">Protocol</span></h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 text-left">
             {[
-              { icon: Terminal, title: "Execute the Blueprint", desc: "Transition from a passive digital survivor to an active systems operator. Request your 1-on-1 integration slot to deploy your architecture through this hands-on, 3-part protocol." },
-              { icon: ShieldCheck, title: "Private Referral Access", desc: "This masterclass operates strictly within a closed network. Submit your application and referrer details for manual review to secure your integration slot." }
+              { icon: Terminal, title: "Execute the Blueprint", desc: "Request your 1-on-1 integration slot to deploy your architecture through this hands-on, 3-part protocol." },
+              { icon: ShieldCheck, title: "Private Referral Access", desc: "This masterclass operates strictly within a closed network. Please submit your booking with referrer name and follow-up with Payment instructions email." }
             ].map((item, i) => (
-              <div key={i} className="p-5 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[100px] transition-colors duration-300">
+              <div key={i} className="p-3 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[100px] transition-colors duration-300">
                 <item.icon 
                   className="absolute top-1/2 right-4 -translate-y-1/2 text-[#dc2626] opacity-10 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300 z-0" 
                   size={100} 
                 />
-                <div className="relative z-10 space-y-1 md:space-y-2">
+                <div className="relative z-10 space-y-2 md:space-y-2">
                   <h4 className="font-bold uppercase tracking-tight text-sm md:text-base">{item.title}</h4>
-                  <p className="text-xm md:text-sm text-zinc-100 font-mono leading-relaxed">{item.desc}</p>
+                  <p className="text-xs/4 md:text-sm text-zinc-100 font-mono">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="space-y-6">
-            <div className="space-y-4">
+          <div className="space-y-4">
+            <div className="space-y-4 p-2">
               <a 
                 href="https://meet.bparlan.com/index.php/?provider=6" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-10 py-4 md:px-12 md:py-6 bg-[#dc2626] text-white font-black text-lg md:text-xl uppercase tracking-[0.2em] hover:bg-black transition-colors shadow-[0_0_30px_rgba(220,38,38,0.5)] border border-black hover:border-white bg-red-800 hover:bg-white hover:text-black relative overflow-hidden group flex flex-col justify-center transition-colors duration-300"
+                className="inline-flex items-center justify-center px-8 py-2 md:px-12 md:py-6 bg-[#dc2626] text-white font-black text-lg md:text-xl uppercase tracking-[0.2em] hover:bg-black transition-colors shadow-[0_0_30px_rgba(220,38,38,0.5)] border border-black hover:border-white bg-red-800 hover:bg-white hover:text-black relative overflow-hidden group flex flex-col justify-center transition-colors duration-300"
               >
                 Apply Now
               </a>
-              <p className="text-[#dc2626] font-mono text-xs md:text-sm uppercase tracking-widest font-bold">By Referral Only</p>
             </div>
-            <div className="space-y-5">
-              <p className="text-xs md:text-xs font-mono text-white px-4">
+            <div className="space-y-2">
+              <p className="text-xs/4 md:text-xs font-mono text-white px-0">
                 <span className="text-black bg-white">Requirements:</span>
-                <br /> Own computer, quiet environment, headset/mic.<br /><br />I offer a 20% fee reduction for purpose-driven projects
-                <br />and individuals whose missions resonate with
-                <br />my values of personal autonomy and open knowledge<br />
+                <br /> Own computer, quiet space, headset & mic<br />
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-xs md:text-xs font-mono text-zinc-400">
-                <span>Telegram: <a href="http://t.me/bparlan" className="hover:text-white transition-colors">@bparlan</a></span>
+              <div className="flex-wrap justify-center gap-0 text-xs md:text-xs font-mono text-zinc-400">
+                <span>Telegram: <a href="http://t.me/bparlan" className="hover:text-white transition-colors">@bparlan</a></span><br />
                 Email: <a href="mailto:bparlan@bparlan.com" className="hover:text-white transition-colors">bparlan@bparlan.com</a>
               </div>
             </div>
           </div>
 
-          <footer className="pt-8 md:pt-12 border-t border-zinc-900">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-xs md:text-xs font-mono text-zinc-500 uppercase tracking-widest">
+          <footer className="pt-2 md:pt-6 border-t border-zinc-700">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8 text-xs md:text-xs font-mono text-zinc-500 uppercase tracking-widest">
               <span>© Barış Parlan 2026</span>
             </div>
           </footer>
