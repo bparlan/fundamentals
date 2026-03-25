@@ -165,12 +165,21 @@ export default function App() {
             <Layers className="absolute -bottom-4 -right-4 text-white opacity-5" size={160} />
             <div className="relative z-10 space-y-2">
               <div className="flex items-center gap-4">
+                <div className="text-4xl md:text-5xl font-black text-[#dc2626] drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]">€90</div>
+                <div className="font-mono uppercase tracking-tighter text-xs md:text-sm text-white">
+                  Session Price<br />
+                  <span className="text-zinc-500">90 Minutes</span>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-zinc-800">
+              <div className="flex items-center gap-4">
                 <div className="text-4xl md:text-5xl font-black text-white">3</div>
                 <div className="font-mono uppercase tracking-tighter text-xs md:text-sm text-white">
                   Sessions<br />
-                  <span className="text-zinc-500">Intensive Integration</span>
-                </div>
+                  <span className="text-zinc-500">Full Integration</span>
+                </div></div>
               </div>
+              
               <div className="flex items-center gap-4">
                 <div className="text-4xl md:text-5xl font-black text-white">90</div>
                 <div className="font-mono uppercase tracking-tighter text-xs md:text-sm text-white">
@@ -178,13 +187,13 @@ export default function App() {
                   <span className="text-zinc-500">Hands-on Practical Experience</span>
                 </div>
               </div>
-              <div className="pt-4 border-t border-zinc-800">
+              
                 <div className="flex items-center gap-4">
-                <div className="text-4xl md:text-5xl font-black text-[#dc2626] drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]">€200</div>
-                <div className="text-xs md:text-xs font-mono text-white-400 uppercase tracking-tighter">Total Fee <br />
+                <div className="text-4xl md:text-5xl font-black text-[#dc2626] drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]">€220</div>
+                <div className="text-xs md:text-xs font-mono text-white-400 uppercase tracking-tighter">Full Package / %20 Discount <br />
                   <span className="text-zinc-500">90 Minutes X 3 Session</span></div>
                 </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -193,12 +202,15 @@ export default function App() {
       {/* Slide 3: Module 1 - The Fortress */}
       <Slide id="fortress">
         <div className="max-w-4xl w-full space-y-4 md:space-y-12">
-          <div className="flex justify-center items-baseline gap-3 md:gap-4">
-            <span className="text-4xl md:text-5xl font-black text-zinc-800">01</span>
-            <div className="space-y-1">
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Fortress</h2>
-              <p className="font-mono text-white bg-[rgb(220,38,38)] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold text-center ">Digital Literacy</p>
-              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono">
+          <div className="flex items-baseline justify-between gap-4">
+            <div className="space-y-1 flex-1">
+              <div className="flex items-center gap-3 md:gap-4">
+                <span className="text-4xl md:text-5xl font-black text-zinc-800">01</span>
+                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Fortress</h2>
+                <span className="text-3xl md:text-5xl font-black text-[#dc2626] flex-shrink-0 grow text-right">€90</span>
+              </div>
+              <p className="font-mono text-white bg-[rgb(220,38,38)] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold text-center">Digital Literacy</p>
+              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono text-center">
               90 Minute | 1-on-1 | Online Session
             </p>
             </div>
@@ -232,12 +244,15 @@ export default function App() {
       {/* Slide 4: Module 2 - The Engine */}
       <Slide id="engine">
         <div className="max-w-4xl w-full space-y-4 md:space-y-12">
-          <div className="flex justify-center items-baseline gap-3 md:gap-4">
-            <span className="text-4xl md:text-5xl font-black text-zinc-800">02</span>
-            <div className="space-y-1">
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Engine</h2>
+          <div className="flex items-baseline justify-between gap-4">
+            <div className="space-y-1 flex-1">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="text-4xl md:text-5xl font-black text-zinc-800">02</div>
+                <div className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Engine</div>
+                <div className="text-3xl md:text-5xl font-black text-[#00ff5e] flex-shrink-0 grow text-right">€90</div>
+              </div>
               <p className="font-mono text-black bg-[#00ff5e] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold text-center">AI & Agents</p>
-              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono">
+              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono text-center">
               90 Minute | 1-on-1 | Online Session
             </p>
             </div>
@@ -271,12 +286,15 @@ export default function App() {
       {/* Slide 5: Module 3 - The Vault */}
       <Slide id="vault">
         <div className="max-w-4xl w-full space-y-4 md:space-y-12">
-          <div className="flex justify-center items-baseline gap-3 md:gap-4">
-            <span className="text-4xl md:text-5xl font-black text-zinc-800">03</span>
-            <div className="space-y-1">
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Vault</h2>
-              <p className="font-mono text-black bg-[#3b82f6] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.1em] font-bold text-center">Blockchain & Web3</p>
-              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono">
+          <div className="flex items-baseline justify-between gap-4">
+            <div className="space-y-1 flex-1">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="text-4xl md:text-5xl font-black text-zinc-800">03</div>
+                <div className="text-3xl md:text-5xl font-black uppercase tracking-tighter">The Vault</div>
+                <div className="text-3xl md:text-5xl font-black text-[#0062ff] flex-shrink-0 grow text-right">€90</div>
+              </div>
+              <p className="font-mono text-black bg-[#0062ff] text-xl md:text-3xl uppercase tracking-[0.1em] md:tracking-[0.1em] font-bold text-center">Blockchain & Web3</p>
+              <p className="text-xs md:text-xl text-zinc-300 leading-relaxed font-mono text-center">
               90 Minute | 1-on-1 | Online Session
             </p>
             </div>
@@ -311,13 +329,15 @@ export default function App() {
       <Slide id="protocol">
         <div className="max-w-4xl w-full space-y-2 md:space-y-6 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter">The Integration <span className="text-[#dc2626]">Protocol</span></h2>
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">Read Before <span className="text-[#dc2626]">Booking</span></h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 text-left">
             {[
-              { icon: Terminal, title: "Execute the Blueprint", desc: "Request your 1-on-1 integration slot to deploy your architecture through this hands-on, 3-part protocol." },
-              { icon: ShieldCheck, title: "Private Referral Access", desc: "This masterclass operates strictly within a closed network. Please submit your booking with referrer name and follow-up with Payment instructions email." }
+              {
+                icon: ShieldCheck, title: "Referral Access Only", desc: "This masterclass operates strictly within a closed network; Submit your Referrer Name during application. Upon manual approval, your booking details and payment information will be send to your e-mail inbox." },
+                { icon: Globe, title: "Mission Discount", desc: "I offer a 20% fee reduction at my discretion for individuals whose creative projects and missions resonate with my values of sharing, open knowledge, and personal autonomy." },
+                { icon: Users, title: "+1 Seat Capability", desc: "Sovereignty is best built alongside a trusted partner. Add a second participant to your private, 1-on-1 integration sessions (+€30 for a single module, or +€50 for the €220 Full Package)." }
             ].map((item, i) => (
               <div key={i} className="p-3 md:p-6 border border-zinc-800 hover:border-white bg-zinc-900/20 relative overflow-hidden group flex flex-col justify-center min-h-[100px] transition-colors duration-300">
                 <item.icon 
