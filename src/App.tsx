@@ -355,7 +355,7 @@ export default function App() {
           <div className="space-y-4">
             <div className="space-y-4 p-2">
               <a 
-                href="https://meet.bparlan.com/index.php/?provider=6&service=2" 
+                href="https://cal.bparlan.com/bparlan"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-2 md:px-12 md:py-6 bg-[#dc2626] text-white font-black text-lg md:text-xl uppercase tracking-[0.2em] hover:bg-black transition-colors shadow-[0_0_30px_rgba(220,38,38,0.5)] border border-black hover:border-white bg-red-800 hover:bg-white hover:text-black relative overflow-hidden group flex flex-col justify-center transition-colors duration-300"
